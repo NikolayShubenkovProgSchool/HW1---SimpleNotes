@@ -36,7 +36,13 @@
                             </tableView>
                         </subviews>
                     </view>
-                    <navigationItem key="navigationItem" title="Notes" id="2Wf-zX-mhU"/>
+                    <navigationItem key="navigationItem" title="Notes" id="2Wf-zX-mhU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EjR-lW-jac">
+                            <connections>
+                                <action selector="addNote:" destination="zhw-JF-a6J" id="Bxs-61-B1E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="z0E-eG-LqS" id="Wzu-PW-25k"/>
                     </connections>

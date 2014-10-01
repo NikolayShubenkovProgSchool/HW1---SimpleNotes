@@ -27,15 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNote)];
-    self.navigationItem.rightBarButtonItem = addButton;
 }
-
-- (void)addNote {
+- (IBAction)addNote:(UIBarButtonItem *)sender {
     PSRNote *note = [[PSRNote alloc] init];
     [[PSRNoteManager sharedManager] addOrUpdateNote:note];
     [self.tableView reloadData];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

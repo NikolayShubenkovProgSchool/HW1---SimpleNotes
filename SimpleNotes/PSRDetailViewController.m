@@ -24,13 +24,6 @@
     }
     
     self.navigationItem.title = self.note.text;
-    
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
-    self.navigationItem.rightBarButtonItem = cancelButton;
-}
-
-- (void)cancel {
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

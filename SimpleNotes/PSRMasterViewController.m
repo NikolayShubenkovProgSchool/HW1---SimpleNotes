@@ -39,7 +39,6 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
         [[segue destinationViewController] setNote:note];
-        
     }
 }
 

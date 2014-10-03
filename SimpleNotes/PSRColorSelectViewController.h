@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PSRColorSelectDelegate;
+
 @interface PSRColorSelectViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *colorView;
@@ -16,8 +18,15 @@
 @property (weak, nonatomic) IBOutlet UISlider *greenSlider;
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 
-- (IBAction)sliderValueChanged:(UISlider *)sender;
+@property (weak, nonatomic) id<PSRColorSelectDelegate> delegate;
 
+- (IBAction)sliderValueChanged:(UISlider *)sender;
 - (IBAction)colorSelectDone:(UIButton *)sender;
+
+@end
+
+@protocol PSRColorSelectDelegate <NSObject>
+
+- (void)colorChanged:(UIColor *)color;
 
 @end

@@ -35,5 +35,6 @@
 }
 
 - (IBAction)colorSelectDone:(UIButton *)sender {
+    [self.delegate colorChanged:self.colorView.backgroundColor];
 }
 @end

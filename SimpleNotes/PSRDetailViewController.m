@@ -42,7 +42,7 @@
 - (IBAction)showColorSelect:(UIBarButtonItem *)sender {
     PSRColorSelectViewController *csvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRColorSelectViewController"];
     csvc.delegate = self;
-    csvc.selectedColor = self.textView.textColor ? self.textView.textColor : [UIColor blackColor];
+    csvc.selectedColor = self.textView.textColor;
     [self.navigationController pushViewController:csvc animated:YES];
 }
 

@@ -25,6 +25,7 @@
 - (void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeObject:self.text forKey:@"text"];
     [coder encodeObject:self.date forKey:@"date"];
+    [coder encodeObject:self.textColor forKey:@"textColor"];
 }    
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -33,6 +34,7 @@
     if (self) {
         self.text = [aDecoder decodeObjectForKey:@"text"];
         self.date = [aDecoder decodeObjectForKey:@"date"];
+        self.textColor = [aDecoder decodeObjectForKey:@"textColor"];
     }
     
     return self; 

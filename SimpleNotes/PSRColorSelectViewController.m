@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    CGFloat red;
-    CGFloat green;
-    CGFloat blue;
+    CGFloat red = 0;
+    CGFloat green = 0;
+    CGFloat blue = 0;
     [self.selectedColor getRed:&red
                          green:&green
                           blue:&blue

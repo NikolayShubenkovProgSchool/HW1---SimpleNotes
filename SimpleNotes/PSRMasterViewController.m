@@ -20,13 +20,15 @@
     [super viewDidLoad];
 }
 
-- (IBAction)addNote:(UIBarButtonItem *)sender {
-    PSRNote *note = [[PSRNote alloc] init];
-    [[PSRNoteManager sharedManager] addOrUpdateNote:note];
+- (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+#pragma mark - Actions
+
+- (IBAction)addNote:(UIBarButtonItem *)sender {
+    PSRNote *note = [[PSRNote alloc] init];
+    [[PSRNoteManager sharedManager] addOrUpdateNote:note];
     [self.tableView reloadData];
 }
 

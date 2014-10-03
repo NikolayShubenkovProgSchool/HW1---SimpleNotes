@@ -32,11 +32,20 @@
     PSRNote *note = [[PSRNote alloc] init];
     [[PSRNoteManager sharedManager] addOrUpdateNote:note];
     [self.tableView reloadData];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
+        [[segue destinationViewController] setNote:note];
+    }
 }
 
 #pragma mark - UITableView delegate methods
@@ -58,14 +67,6 @@
     cell.textLabel.text = note.text;
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PSRDetailViewController *detailVC = [[PSRDetailViewController alloc] init];
-    PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
-//    detailVC.textView.text = note.text;
-    detailVC.note = note;
-    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end

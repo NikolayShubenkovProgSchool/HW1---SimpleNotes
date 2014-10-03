@@ -16,9 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.textView = [[UITextView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.textView];
     
     if (self.note) {
         self.textView.text = self.note.text;

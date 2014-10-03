@@ -11,7 +11,7 @@
 
 @interface PSRDetailViewController : UIViewController
 
-@property (nonatomic, strong) UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, strong) PSRNote *note;
 
 @end

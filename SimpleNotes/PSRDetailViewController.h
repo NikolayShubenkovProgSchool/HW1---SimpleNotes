@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) PSRNote *note;
 
-- (IBAction)showColorSelect:(UIBarButtonItem *)sender;
+//- (IBAction)showColorSelect:(UIBarButtonItem *)sender;
 - (IBAction)showFontSelect:(UIBarButtonItem *)sender;
 
 @end

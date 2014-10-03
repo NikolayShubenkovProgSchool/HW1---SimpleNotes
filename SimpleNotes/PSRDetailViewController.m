@@ -32,14 +32,23 @@
     self.note.font = self.textView.font;
 }
 
-#pragma mark - Actions
+#pragma mark - Segue
 
-- (IBAction)showColorSelect:(UIBarButtonItem *)sender {
-    PSRColorSelectViewController *csvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRColorSelectViewController"];
-    csvc.delegate = self;
-    csvc.selectedColor = self.textView.textColor;
-    [self.navigationController pushViewController:csvc animated:YES];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"PSRColorSelectViewController"]) {
+        [segue.destinationViewController setDelegate:self];
+        [segue.destinationViewController setSelectedColor:self.textView.textColor];
+    }
 }
+
+#pragma mark - Actions
+//
+//- (IBAction)showColorSelect:(UIBarButtonItem *)sender {
+//    PSRColorSelectViewController *csvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRColorSelectViewController"];
+//    csvc.delegate = self;
+//    csvc.selectedColor = self.textView.textColor;
+//    [self.navigationController pushViewController:csvc animated:YES];
+//}
 
 - (IBAction)showFontSelect:(UIBarButtonItem *)sender {
     PSRFontSelectViewController *fsvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRFontSelectViewController"];

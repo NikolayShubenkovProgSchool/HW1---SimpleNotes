@@ -25,6 +25,7 @@
 		1F42EFEB190989DC00B91F5B /* PSRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */; };
 		1F876B9D19165105009DA0BB /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F876B9C19165105009DA0BB /* yoda.png */; };
 		8249599919DC9C6800703765 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8249599819DC9C6800703765 /* Storyboard.storyboard */; };
+		824CC80419DEEF6D005537DA /* PSRColorSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRDetailViewController.m; sourceTree = "<group>"; };
 		1F876B9C19165105009DA0BB /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoda.png; sourceTree = "<group>"; };
 		8249599819DC9C6800703765 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		824CC80219DEEF6D005537DA /* PSRColorSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRColorSelectViewController.h; sourceTree = "<group>"; };
+		824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRColorSelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				1F42EFE719097ED100B91F5B /* PSRMasterViewController.m */,
 				1F42EFE9190989DC00B91F5B /* PSRDetailViewController.h */,
 				1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */,
+				824CC80219DEEF6D005537DA /* PSRColorSelectViewController.h */,
+				824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */,
 				8249599819DC9C6800703765 /* Storyboard.storyboard */,
 				1F876B9C19165105009DA0BB /* yoda.png */,
 				1F42EFE5190978EC00B91F5B /* Model */,
@@ -278,6 +283,7 @@
 			files = (
 				1F42EFC1190978A700B91F5B /* PSRAppDelegate.m in Sources */,
 				1F42EFE4190978E200B91F5B /* PSRNoteManager.m in Sources */,
+				824CC80419DEEF6D005537DA /* PSRColorSelectViewController.m in Sources */,
 				1F42EFE3190978E200B91F5B /* PSRNote.m in Sources */,
 				1F42EFEB190989DC00B91F5B /* PSRDetailViewController.m in Sources */,
 				1F42EFE819097ED100B91F5B /* PSRMasterViewController.m in Sources */,

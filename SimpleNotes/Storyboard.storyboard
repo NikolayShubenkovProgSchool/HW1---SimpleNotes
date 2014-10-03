@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gGG-zT-KJh">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -74,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klg-pj-7i9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text of note" translatesAutoresizingMaskIntoConstraints="NO" id="klg-pj-7i9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -110,6 +109,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkS-lp-q2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="434"/>
+        </scene>
+        <!--Color Select View Controller-->
+        <scene sceneID="Hgd-41-T14">
+            <objects>
+                <viewController id="fF4-HU-6tv" customClass="PSRColorSelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wqu-DB-meU"/>
+                        <viewControllerLayoutGuide type="bottom" id="zsa-XF-XAr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="frH-ee-nik">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x07-Ta-kQU">
+                                <rect key="frame" x="0.0" y="91" width="320" height="268"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RKR-sX-WQp">
+                                        <rect key="frame" x="60" y="120" width="200" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="QpK-Gt-3ri"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pgl-Pd-waW">
+                                        <rect key="frame" x="60" y="190" width="200" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="5hw-AY-kqj"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ox8-gS-FAn">
+                                        <rect key="frame" x="60" y="50" width="200" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="Ys8-g1-FX2"/>
+                                            <action selector="sliderValueChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="UoS-9Y-Vgi"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50532675169999997" green="0.68977293049999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBe-Rq-Hry">
+                                <rect key="frame" x="142" y="388" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="colorSelectDone:" destination="fF4-HU-6tv" eventType="touchUpInside" id="JUz-58-VrM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="pgl-Pd-waW" id="DZ7-o6-nTV"/>
+                        <outlet property="colorView" destination="x07-Ta-kQU" id="Hvq-tJ-gRS"/>
+                        <outlet property="greenSlider" destination="RKR-sX-WQp" id="Ryi-g5-4Wv"/>
+                        <outlet property="redSlider" destination="Ox8-gS-FAn" id="swp-OU-CRr"/>
+                        <outlet property="sliderView" destination="x07-Ta-kQU" id="f2E-lg-BwT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewk-xs-Nxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="237"/>
         </scene>
     </scenes>
 </document>

@@ -33,4 +33,7 @@
                                                        blue:self.blueSlider.value
                                                       alpha:1.0];
 }
+
+- (IBAction)colorSelectDone:(UIButton *)sender {
+}
 @end

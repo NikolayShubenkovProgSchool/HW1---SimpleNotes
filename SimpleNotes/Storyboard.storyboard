@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gGG-zT-KJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fF4-HU-6tv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -128,20 +128,19 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RKR-sX-WQp">
                                         <rect key="frame" x="60" y="120" width="200" height="31"/>
                                         <connections>
-                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="QpK-Gt-3ri"/>
+                                            <action selector="sliderValueChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="OC2-RC-MVE"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pgl-Pd-waW">
                                         <rect key="frame" x="60" y="190" width="200" height="31"/>
                                         <connections>
-                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="5hw-AY-kqj"/>
+                                            <action selector="sliderValueChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="6IR-MV-Lxn"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ox8-gS-FAn">
                                         <rect key="frame" x="60" y="50" width="200" height="31"/>
                                         <connections>
-                                            <action selector="sliderChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="Ys8-g1-FX2"/>
-                                            <action selector="sliderValueChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="UoS-9Y-Vgi"/>
+                                            <action selector="sliderValueChanged:" destination="fF4-HU-6tv" eventType="valueChanged" id="mtM-lM-ocb"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -153,7 +152,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorSelectDone:" destination="fF4-HU-6tv" eventType="touchUpInside" id="JUz-58-VrM"/>
+                                    <action selector="colorSelectDone:" destination="fF4-HU-6tv" eventType="touchUpInside" id="7P7-kq-37b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,7 +164,6 @@
                         <outlet property="colorView" destination="x07-Ta-kQU" id="Hvq-tJ-gRS"/>
                         <outlet property="greenSlider" destination="RKR-sX-WQp" id="Ryi-g5-4Wv"/>
                         <outlet property="redSlider" destination="Ox8-gS-FAn" id="swp-OU-CRr"/>
-                        <outlet property="sliderView" destination="x07-Ta-kQU" id="f2E-lg-BwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewk-xs-Nxo" userLabel="First Responder" sceneMemberID="firstResponder"/>

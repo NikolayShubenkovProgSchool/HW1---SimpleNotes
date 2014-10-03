@@ -18,5 +18,6 @@
 
 - (IBAction)sliderValueChanged:(UISlider *)sender;
 
+- (IBAction)colorSelectDone:(UIButton *)sender;
 
 @end

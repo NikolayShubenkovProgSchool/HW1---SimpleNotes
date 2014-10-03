@@ -27,6 +27,6 @@
 
 @protocol PSRColorSelectDelegate <NSObject>
 
-- (void)colorChanged:(UIColor *)color;
+- (void)colorDidChanged:(UIColor *)color;
 
 @end

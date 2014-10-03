@@ -35,6 +35,7 @@
 }
 
 - (IBAction)colorSelectDone:(UIButton *)sender {
-    [self.delegate colorChanged:self.colorView.backgroundColor];
+    [self.delegate colorDidChanged:self.colorView.backgroundColor];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

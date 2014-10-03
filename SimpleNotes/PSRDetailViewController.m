@@ -23,6 +23,8 @@
     
     self.navigationItem.title = self.note.text;
     
+    
+    
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     self.navigationItem.rightBarButtonItem = cancelButton;
 }
@@ -33,6 +35,20 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     self.note.text = self.textView.text;
+}
+
+#pragma mark - Actions
+
+- (IBAction)showColorSelect:(UIBarButtonItem *)sender {
+    PSRColorSelectViewController *csvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRColorSelectViewController"];
+    csvc.delegate = self;
+    [self.navigationController pushViewController:csvc animated:YES];
+}
+
+#pragma mark - PSRColorSelectDelegate
+
+- (void)colorDidChanged:(UIColor *)color {
+    self.textView.textColor = color;
 }
 
 @end

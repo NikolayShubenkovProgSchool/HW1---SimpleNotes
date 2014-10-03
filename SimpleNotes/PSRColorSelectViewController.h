@@ -12,6 +12,8 @@
 
 @interface PSRColorSelectViewController : UIViewController
 
+@property (strong, nonatomic) UIColor *selectedColor;
+
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;

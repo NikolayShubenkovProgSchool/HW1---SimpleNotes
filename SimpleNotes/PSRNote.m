@@ -14,8 +14,9 @@
     self = [super init];
     
     if (self) {
-        self.text = @"New note";
-        self.date = [NSDate date];
+        _text = @"New note";
+        _date = [NSDate date];
+        _textColor = [UIColor blackColor];
     }
     
     return self;

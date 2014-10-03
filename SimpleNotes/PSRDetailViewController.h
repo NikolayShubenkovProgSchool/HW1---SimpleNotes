@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "PSRNote.h"
 #import "PSRColorSelectViewController.h"
+#import "PSRFontSelectViewController.h"
 
-@interface PSRDetailViewController : UIViewController <PSRColorSelectDelegate>
+@interface PSRDetailViewController : UIViewController <PSRColorSelectDelegate, PSRFontSelectDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) PSRNote *note;
 
 - (IBAction)showColorSelect:(UIBarButtonItem *)sender;
+- (IBAction)showFontSelect:(UIBarButtonItem *)sender;
 
 @end

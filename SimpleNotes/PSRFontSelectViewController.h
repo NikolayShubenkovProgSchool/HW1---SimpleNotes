@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PSRFontSelectDelegate;
+
 @interface PSRFontSelectViewController : UITableViewController
+
+@property (weak, nonatomic) id<PSRFontSelectDelegate> delegate;
+
+@end
+
+@protocol PSRFontSelectDelegate <NSObject>
+
+- (void)fontDidSelected:(UIFont *)font;
 
 @end

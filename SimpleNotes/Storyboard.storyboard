@@ -90,7 +90,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Font" id="i96-l8-04j">
                                         <connections>
-                                            <segue destination="GpY-jD-TKi" kind="show" id="BHc-Nj-Jbg"/>
+                                            <action selector="showFontSelect:" destination="Kwz-bj-a0G" id="uwv-tF-rgP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -189,7 +189,7 @@
         <!--Font Select View Controller-->
         <scene sceneID="Qck-fq-3K8">
             <objects>
-                <tableViewController id="GpY-jD-TKi" customClass="PSRFontSelectViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PSRFontSelectViewController" id="GpY-jD-TKi" customClass="PSRFontSelectViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qc7-rU-Ngj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

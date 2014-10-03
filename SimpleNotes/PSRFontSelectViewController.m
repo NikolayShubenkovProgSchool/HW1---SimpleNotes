@@ -22,6 +22,17 @@
     self.familyNames = [UIFont familyNames];
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *familyName = self.familyNames[indexPath.section];
+    NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+    NSString *fontName = fontNames[indexPath.row];
+    UIFont *selectedFont = [UIFont fontWithName:fontName size:16.f];
+    [self.delegate fontDidSelected:selectedFont];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

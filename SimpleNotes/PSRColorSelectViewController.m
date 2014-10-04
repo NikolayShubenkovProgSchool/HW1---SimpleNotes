@@ -8,6 +8,8 @@
 
 #import "PSRColorSelectViewController.h"
 
+#import "UIColor+PSRComponents.h"
+
 @interface PSRColorSelectViewController ()
 
 @end
@@ -16,17 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    CGFloat red = 0;
-    CGFloat green = 0;
-    CGFloat blue = 0;
-    [self.selectedColor getRed:&red
-                         green:&green
-                          blue:&blue
-                         alpha:nil];
-    self.redSlider.value = red;
-    self.greenSlider.value = green;
-    self.blueSlider.value = blue;
+    self.redSlider.value   = [self.selectedColor psr_redComponent];
+    self.greenSlider.value = [self.selectedColor psr_greenComponent];
+    self.blueSlider.value  = [self.selectedColor psr_blueComponent];
     
     [self sliderValueChanged:nil];
 }

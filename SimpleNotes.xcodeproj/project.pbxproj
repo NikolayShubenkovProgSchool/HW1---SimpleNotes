@@ -27,6 +27,7 @@
 		8249599919DC9C6800703765 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8249599819DC9C6800703765 /* Storyboard.storyboard */; };
 		824CC80419DEEF6D005537DA /* PSRColorSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */; };
 		824CC80719DF3BF6005537DA /* PSRFontSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 824CC80619DF3BF6005537DA /* PSRFontSelectViewController.m */; };
+		FE70451919E02A95009724CB /* UIColor+PSRComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = FE70451819E02A95009724CB /* UIColor+PSRComponents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		824CC80519DF3BF6005537DA /* PSRFontSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFontSelectViewController.h; sourceTree = "<group>"; };
 		824CC80619DF3BF6005537DA /* PSRFontSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFontSelectViewController.m; sourceTree = "<group>"; };
 		FE70451619E0270E009724CB /* PSRColorSelectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRColorSelectProtocol.h; sourceTree = "<group>"; };
+		FE70451719E02A95009724CB /* UIColor+PSRComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSRComponents.h"; sourceTree = "<group>"; };
+		FE70451819E02A95009724CB /* UIColor+PSRComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSRComponents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				FE70451619E0270E009724CB /* PSRColorSelectProtocol.h */,
 				824CC80219DEEF6D005537DA /* PSRColorSelectViewController.h */,
 				824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */,
+				FE70451719E02A95009724CB /* UIColor+PSRComponents.h */,
+				FE70451819E02A95009724CB /* UIColor+PSRComponents.m */,
 				824CC80519DF3BF6005537DA /* PSRFontSelectViewController.h */,
 				824CC80619DF3BF6005537DA /* PSRFontSelectViewController.m */,
 				8249599819DC9C6800703765 /* Storyboard.storyboard */,
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F42EFC1190978A700B91F5B /* PSRAppDelegate.m in Sources */,
+				FE70451919E02A95009724CB /* UIColor+PSRComponents.m in Sources */,
 				1F42EFE4190978E200B91F5B /* PSRNoteManager.m in Sources */,
 				824CC80419DEEF6D005537DA /* PSRColorSelectViewController.m in Sources */,
 				824CC80719DF3BF6005537DA /* PSRFontSelectViewController.m in Sources */,

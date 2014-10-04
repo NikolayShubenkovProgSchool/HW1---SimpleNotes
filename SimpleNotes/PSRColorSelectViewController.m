@@ -22,26 +22,36 @@
     self.greenSlider.value = [self.selectedColor psr_greenComponent];
     self.blueSlider.value  = [self.selectedColor psr_blueComponent];
     
-    [self sliderValueChanged:nil];
+    [self updateView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Setup
+
+- (void)updateModel {
+    self.selectedColor = [UIColor colorWithRed:self.redSlider.value
+                                         green:self.greenSlider.value
+                                          blue:self.blueSlider.value
+                                         alpha:1.0];
+}
+
+- (void)updateView
+{
+    self.colorView.backgroundColor = self.selectedColor;
 }
 
 #pragma mark - Actions
 
 - (IBAction)sliderValueChanged:(UISlider *)sender {
-    self.selectedColor = [UIColor colorWithRed:self.redSlider.value
-                                         green:self.greenSlider.value
-                                          blue:self.blueSlider.value
-                                         alpha:1.0];
-    self.colorView.backgroundColor = self.selectedColor;
+    [self updateModel];
+    [self updateView];
 }
 
 - (IBAction)colorSelectDone:(UIButton *)sender {
     [self.delegate colorDidChanged:self.selectedColor];
+    //в идеале убирать с экрана должен делегат а не сам colorSelectorViewContorller
+    //т.к. только делегат в курсе как долго должен быть выбор цвета.
+    //может делегат решить вывести сообщение, что этот цвет чем-то не подходит
+    //и не захочет убирать этот контроллер с экрана
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

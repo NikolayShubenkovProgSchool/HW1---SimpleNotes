@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PSRColorSelectDelegate;
+#import "PSRColorSelectProtocol.h"
 
-@interface PSRColorSelectViewController : UIViewController
+@interface PSRColorSelectViewController : UIViewController <PSRColorSelectorProtocol>
 
 @property (strong, nonatomic) UIColor *selectedColor;
 
@@ -27,8 +27,3 @@
 
 @end
 
-@protocol PSRColorSelectDelegate <NSObject>
-
-- (void)colorDidChanged:(UIColor *)color;
-
-@end

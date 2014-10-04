@@ -70,6 +70,7 @@
 		824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRColorSelectViewController.m; sourceTree = "<group>"; };
 		824CC80519DF3BF6005537DA /* PSRFontSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFontSelectViewController.h; sourceTree = "<group>"; };
 		824CC80619DF3BF6005537DA /* PSRFontSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFontSelectViewController.m; sourceTree = "<group>"; };
+		FE70451619E0270E009724CB /* PSRColorSelectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRColorSelectProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +136,7 @@
 				1F42EFE719097ED100B91F5B /* PSRMasterViewController.m */,
 				1F42EFE9190989DC00B91F5B /* PSRDetailViewController.h */,
 				1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */,
+				FE70451619E0270E009724CB /* PSRColorSelectProtocol.h */,
 				824CC80219DEEF6D005537DA /* PSRColorSelectViewController.h */,
 				824CC80319DEEF6D005537DA /* PSRColorSelectViewController.m */,
 				824CC80519DF3BF6005537DA /* PSRFontSelectViewController.h */,

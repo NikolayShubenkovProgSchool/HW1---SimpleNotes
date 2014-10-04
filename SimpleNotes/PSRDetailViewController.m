@@ -7,6 +7,7 @@
 //
 
 #import "PSRDetailViewController.h"
+#import "PSRColorSelectProtocol.h"
 
 @interface PSRDetailViewController ()
 
@@ -35,9 +36,30 @@
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    /*
+    
+    //подсветка идет т.к.  компилятор не знает что за объект этот destinationViewController
     if ([[segue identifier] isEqualToString:@"PSRColorSelectViewController"]) {
-        [segue.destinationViewController setDelegate:self];
-        [segue.destinationViewController setSelectedColor:self.textView.textColor];
+        //переведите курсор в конец метода setDelegate и нажмите escape - вы увидите,
+        //что компилятор посчитал что destinationViewController относится к классу NSFileManager
+        //а вы протокол NSFileManagerDelegate не поддерживаете, поэтому и наблюдаете эту ругать
+        //чтобы от этого избавиться нужно явно задать что за объект этот destinationView controller или
+        //как-то еще сообщить какой именно делегат должен поддерживать протокол.
+        //вариантов два:
+        //импортируйте h файл psrSelectColorViewController'a проверьте что идет переход к обхекту этого класс методом
+        //if([segue.destinationViewController isKindOfClass[PSRSelectViewController]]) - но это не очень круто. {
+            PSRColorSelectViewController *colorSelectViewController = segue.destinationViewContoller;
+            colorSelectViewController.delegate = self;
+            colorSelectViewController.selectedColor = self.textView.textColor;
+        }
+    }
+     */
+    //второй метод перехода к другому контроллеру - выяснить поддерживает ли новый контроллер определенный протокол
+    if ([segue.destinationViewController conformsToProtocol:@protocol(PSRColorSelectorProtocol)]){
+        id <PSRColorSelectorProtocol> destinationContorller = segue.destinationViewController;
+        destinationContorller.selectedColor = self.textView.textColor;
+        destinationContorller.delegate      = self;
     }
 }
 
@@ -49,7 +71,7 @@
 //    csvc.selectedColor = self.textView.textColor;
 //    [self.navigationController pushViewController:csvc animated:YES];
 //}
-
+//я бы использовал сегвей как и вы
 - (IBAction)showFontSelect:(UIBarButtonItem *)sender {
     PSRFontSelectViewController *fsvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PSRFontSelectViewController"];
     fsvc.delegate = self;
